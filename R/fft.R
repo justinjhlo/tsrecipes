@@ -25,12 +25,10 @@ step_fft <- function(
   id = recipes::rand_id("tff")
 ) {
 
-  terms <- ellipse_check(...)
-
   recipes::add_step(
     recipe,
     step_fft_new(
-      terms = terms,
+      terms = enquos(...),
       trained = trained,
       role = role,
       k = k,

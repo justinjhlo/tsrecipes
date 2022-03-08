@@ -28,12 +28,10 @@ step_dtw <- function(
   id = recipes::rand_id("dtw")
 ) {
 
-  terms <- ellipse_check(...)
-
   recipes::add_step(
     recipe,
     step_dtw_new(
-      terms = terms,
+      terms = enquos(...),
       trained = trained,
       role = role,
       k = k,

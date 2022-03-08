@@ -27,12 +27,10 @@ step_dct <- function(
   id = recipes::rand_id("dct")
 ) {
 
-  terms <- ellipse_check(...)
-
   recipes::add_step(
     recipe,
     step_dct_new(
-      terms = terms,
+      terms = enquos(...),
       trained = trained,
       role = role,
       k = k,
