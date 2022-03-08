@@ -76,7 +76,7 @@ colVars <- function(x) {
 
 #' @export
 prep.step_dct <- function(x, training, info = NULL) {
-  col_names <- recipes::terms_select(terms = x$terms, info = info)
+  col_names <- recipes::recipes_eval_select(terms = x$terms, training, info)
   k <- x$k
 
   coefs <- list()

@@ -56,7 +56,7 @@ step_fft_new <- function(terms, role, trained, k, series, skip, id) {
 
 #' @export
 prep.step_fft <- function(x, training, info = NULL) {
-  col_names <- recipes::terms_select(terms = x$terms, info = info)
+  col_names <- recipes::recipes_eval_select(terms = x$terms, training, info)
 
   step_fft_new(
     terms = x$terms,
