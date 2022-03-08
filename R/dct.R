@@ -56,7 +56,7 @@ step_dct <- function(
 #   4. How can you cluster using dct
 
 step_dct_new <- function(terms, role, trained, k, coefs, skip, id) {
-  step(
+  recipes::step(
     subclass = "dct",
     terms = terms,
     role = role,

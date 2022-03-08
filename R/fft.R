@@ -11,6 +11,7 @@
 #'
 #' @references Sayood, K. Introduction to Data Compression
 #'
+#' @importFrom recipes prep bake
 #' @inheritParams recipes::step_bs
 #' @export
 step_fft <- function(
@@ -41,7 +42,7 @@ step_fft <- function(
 }
 
 step_fft_new <- function(terms, role, trained, k, series, skip, id) {
-  step(
+  recipes::step(
     subclass = "fft",
     terms = terms,
     role = role,

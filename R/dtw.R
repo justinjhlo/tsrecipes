@@ -46,7 +46,7 @@ step_dtw <- function(
 }
 
 step_dtw_new <- function(terms, role, trained, k, dtwclust, options, skip, id) {
-  step(
+  recipes::step(
     subclass = "dtw",
     terms = terms,
     role = role,
