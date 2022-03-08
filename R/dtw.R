@@ -13,6 +13,7 @@
 #' objects for each list of time series passed to the step, created once
 #' the step has been trained.
 #'
+#' @importFrom recipes prep bake
 #' @inheritParams recipes::step_bs
 #' @export
 step_dtw <- function(

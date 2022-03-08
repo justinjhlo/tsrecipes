@@ -13,6 +13,7 @@
 #' @param coefs A list of the length and coefficient indices for each
 #' time series passed to the step, created once the step has been trained.
 #'
+#' @importFrom recipes prep bake
 #' @inheritParams recipes::step_bs
 #' @export
 step_dct <- function(

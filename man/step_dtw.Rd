@@ -20,15 +20,12 @@ step_dtw(
 \item{recipe}{A recipe object. The step will be added to the
 sequence of operations for this recipe.}
 
-\item{...}{One or more selector functions to choose which
-variables are affected by the step. See \code{\link[recipes:selections]{selections()}}
-for more details. For the \code{tidy} method, these are not
-currently used.}
+\item{...}{One or more selector functions to choose variables
+for this step. See \code{\link[recipes:selections]{selections()}} for more details.}
 
-\item{role}{For model terms created by this step, what analysis
-role should they be assigned?. By default, the function assumes
-that the new columns created from the original variables will be
-used as predictors in a model.}
+\item{role}{For model terms created by this step, what analysis role should
+they be assigned? By default, the new columns created by this step from
+the original variables will be used as \emph{predictors} in a model.}
 
 \item{trained}{A logical to indicate if the quantities for
 preprocessing have been estimated.}
@@ -43,11 +40,11 @@ the step has been trained.}
 which should not include \code{x}, \code{degree}, or \code{df}.}
 
 \item{skip}{A logical. Should the step be skipped when the
-recipe is baked by \code{\link[recipes:bake.recipe]{bake.recipe()}}? While all operations are baked
-when \code{\link[recipes:prep.recipe]{prep.recipe()}} is run, some operations may not be able to be
+recipe is baked by \code{\link[recipes:bake]{bake()}}? While all operations are baked
+when \code{\link[recipes:prep]{prep()}} is run, some operations may not be able to be
 conducted on new data (e.g. processing the outcome variable(s)).
 Care should be taken when using \code{skip = TRUE} as it may affect
-the computations for subsequent operations}
+the computations for subsequent operations.}
 
 \item{id}{A character string that is unique to this step to identify it.}
 }
