@@ -29,7 +29,7 @@ step_dct <- function(
 
   terms <- ellipse_check(...)
 
-  add_step(
+  recipes::add_step(
     recipe,
     step_dct_new(
       terms = terms,

@@ -27,7 +27,7 @@ step_fft <- function(
 
   terms <- ellipse_check(...)
 
-  add_step(
+  recipes::add_step(
     recipe,
     step_fft_new(
       terms = terms,

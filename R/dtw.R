@@ -30,7 +30,7 @@ step_dtw <- function(
 
   terms <- ellipse_check(...)
 
-  add_step(
+  recipes::add_step(
     recipe,
     step_dtw_new(
       terms = terms,
