@@ -61,7 +61,7 @@ step_dtw_new <- function(terms, role, trained, k, dtwclust, options, skip, id) {
 
 #' @export
 prep.step_dtw <- function(x, training, info = NULL) {
-  col_names <- recipes::recipes_eval_select(terms = x$terms, training, info)
+  col_names <- recipes::recipes_eval_select(x$terms, training, info)
 
   dtwclust <- list()
   for (col_name in col_names) {
